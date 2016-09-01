@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-route</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+    <!-- ngRoute 모듈을 사용하기 위해 추가한다. -->
+    <script type="text/javascript" src="/myApp.js"></script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="#link1">Link 1</a></li>
+                <li><a href="#link2">Link 2</a></li>
+                <li><a href="#link3:hello">Link 3 (:message)</a></li>
+                <li><a href="#link3:hello:hi">Link 3 (:message:message)</a></li>
+                <li><a href="#link4:hello">Link 3 (redirectTo)</a></li>
+                <li><a href="#link5">Link 5 (resolve)</a></li>
+                <li><a href="#link6">Link 6 (resolve Conventions)</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <ng-view></ng-view>
+
+</div>
+
+
+
+</body>
+</html>
