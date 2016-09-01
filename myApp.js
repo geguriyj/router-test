@@ -1,4 +1,5 @@
 var app = angular.module('myApp', ['ngRoute']);
+//$routeProvider객체의 when메소드 이용
 app.config(function ($routeProvider) {
   $routeProvider
       .when('/', {
@@ -21,6 +22,7 @@ app.config(function ($routeProvider) {
               return "/link3"+ routeParams.message1;
           }
       })
+      //비동기패턴 사용가능
       .when('/link5', {
           templateUrl: 'views/page5.html', controller: 'myDataCtrl',
           resolve: {
